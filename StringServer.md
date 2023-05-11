@@ -34,6 +34,7 @@ An input that doesn’t induce a failure:
 The symptom, as the output of running the tests: 
 1. Failure:
 ![](fail.png)
+The symptom was that it was expecting a <3> but was a <4> instead. There's a pattern in the symptom where the length and .
 3. Doesn't induce a failure: 
 ![](success.png)
 
@@ -59,8 +60,12 @@ The bug after:
   }
 ````
 Problem: 
-The problem was that the code wasn't returning the *new* array correctly with the elements of the input array reversed. To fix the issue, you swap the arr[i] and newArray[i] in the body of the for loop and return newArray.
+The problem was that the code wasn't returning the *new* array correctly because it was using arr to try to create a new array instead of using newArray that was mentioned before the for loop, to reverse the elements in the array. You need to create a new array in order to save the changes made. To fix the issue, you swap the arr[i] to newArray[i] in the body of the for loop and return newArray.
 
 ### **Part 3**
 Q: In a couple of sentences, describe something you learned from lab in week 2 or 3 that you didn’t know before. \
-A: Something I learned from lab in week 2 is how to open ports and fork repositories. I also learned about web servers and how to build and run a server on my local computer. Additionally, I was able to use GitHub Desktop and learn about "push origin" to make the changes visible in GitHub. 
+A: Something I learned from lab in week 2 is how to open ports and fork repositories. I also learned about web servers and how to build and run a server on my local computer. Additionally, I was able to use GitHub Desktop and learn about 
+```
+"push origin" 
+```
+to make the changes visible in GitHub. 
